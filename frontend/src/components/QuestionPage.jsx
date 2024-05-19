@@ -5,17 +5,20 @@ import l2 from "../images/l2.jpeg";
 import sendIcon from "../images/send-icon.png";
 
 const QuestionPage = () => {
+  // All States
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [isShow, setIsShow] = useState(false);
 
+  // handler method for input field
   const handleQuestionChange = (e) => {
     setQuestion(e.target.value);
     setError(false);
   };
 
+  // handler method to send question and receive answer
   const handleAskQuestion = async (e) => {
     e.preventDefault();
     setIsShow(true);

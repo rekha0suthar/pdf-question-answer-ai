@@ -5,6 +5,7 @@ from app.utils import nlp_processing
 
 router = APIRouter()
 
+## Method to handle User's question
 @router.post("/{doc_id}", response_model=str)
 async def ask_question(doc_id: int, request: schemas.QuestionRequest, db: Session = Depends(deps.get_db)):
     pdf_doc = db.query(models.PDFDocument).filter(models.PDFDocument.id == doc_id).first()

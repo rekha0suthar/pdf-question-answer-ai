@@ -5,10 +5,12 @@ import uploadBtn from "../images/upload_btn.png";
 import logo from "../images/logo.jpg";
 
 const UploadPage = () => {
+  // All States
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [uploadFile, setUploadFile] = useState(null);
 
+  // handler method to take file and upload it
   const handleFileChange = async (e) => {
     const file = e.target.files[0];
     setUploadFile(file);
@@ -31,6 +33,9 @@ const UploadPage = () => {
     }
   };
 
+  // handler for open file uploader clicking on upload button
+  const handleFileUpload = () => document.getElementById("fileInput").click()
+  
   return (
     <div className="upload-container">
       {/* App logo */}
@@ -53,13 +58,13 @@ const UploadPage = () => {
         {/* Upload button */}
         <button
           className="upload-btn"
-          onClick={() => document.getElementById("fileInput").click()}
+          onClick={handleFileUpload}
         >
           Upload PDF
         </button>
         <button
           className="small"
-          onClick={() => document.getElementById("fileInput").click()}
+          onClick={handleFileUpload}
         >
           <img src={uploadBtn} alt="Upload Button" />
         </button>

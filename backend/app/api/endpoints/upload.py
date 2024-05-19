@@ -9,6 +9,7 @@ router = APIRouter()
 UPLOAD_DIRECTORY = "/app/uploads"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
 
+## Method to handle Uploaded PDF
 @router.post("/", response_model=schemas.PDFDocument)
 async def upload_pdf(file: UploadFile = File(...), db: Session = Depends(deps.get_db)):
     if file.content_type != "application/pdf":
