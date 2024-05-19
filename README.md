@@ -13,14 +13,13 @@ This project is a full-stack application that allows users to upload PDF documen
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/rekha0suthar/pdf-quest-ans-ai
-cd pdf-quest-ans-ai
+git clone https://github.com/rekha0suthar/pdf-question-answer-ai/
+cd pdf-question-answer-ai
 ```
 
 ### 2. Create and Configure the .env File in root directory
 
     HUGGING_FACE_HUB_TOKEN=your_hugging_face_token_here
-    SQLALCHEMY_DATABASE_URL=sqlite:///./sql_app.db
 
 Setup virtual environment -- for backend
 
