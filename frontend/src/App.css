@@ -1,0 +1,162 @@
+.App {
+  width: 100vw;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.upload-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px 0px 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.upload-container img {
+  width: 100px;
+  height: 80px;
+  margin-top: -30px;
+}
+
+.upload-btn {
+  width: 120px;
+  height: 30px;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(187, 184, 184);
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(87, 80, 80);
+  cursor: pointer;
+}
+
+.small {
+  display: none;
+  width: 35px;
+  height: 30px;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.input-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Horizontally center the input field */
+  padding: 10px;
+  margin-bottom: 20px !important;
+}
+
+.input-wrapper input {
+  max-width: calc(100% - 40px);
+  width: 1200px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.input-wrapper img {
+  width: 20px;
+  height: 20px;
+  margin-left: -30px;
+}
+
+.input-wrapper input::placeholder {
+  font-size: 16px;
+}
+
+.input-wrapper input {
+  font-size: 16px;
+  color: rgb(77, 74, 74);
+}
+
+.container {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 150px;
+}
+
+.question,
+.answer {
+  text-align: left;
+  display: flex;
+  padding: 0px 0px 0px 200px;
+}
+
+.wrapper h4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.question img,
+.answer img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.pdf-wrapper {
+  display: flex;
+}
+
+.pdf-wrapper p {
+  margin-right: 10px;
+  margin-top: 7px;
+  color: green;
+}
+
+.wrapper {
+  max-width: 1500px;
+  margin-top: 20px;
+}
+
+.pdf-wrapper p img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 558px) {
+  .upload-btn {
+    display: none;
+  }
+
+  .small {
+    display: block;
+  }
+
+  .small img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .input-wrapper {
+    width: auto;
+  }
+
+  .input-wrapper input {
+    width: 350px;
+  }
+
+  .pdf-wrapper p {
+    width: 10em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .question,
+  .answer {
+    padding: 0px 30px;
+  }
+}
