@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+SQLAlchemy
+pydantic
+PyMuPDF
+transformers>=4.10.0  # Ensure you have the latest version
+torch
+langchain
